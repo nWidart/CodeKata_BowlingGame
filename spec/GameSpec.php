@@ -54,7 +54,7 @@ class GameSpec extends ObjectBehavior
      */
     function it_can_roll_strike()
     {
-        $this->roll(10);
+        $this->rollStrike();
         $this->roll(3);
         $this->roll(4);
         $this->rollMany(16, 0);
@@ -76,5 +76,10 @@ class GameSpec extends ObjectBehavior
     {
         $this->roll(5);
         $this->roll(5);
+    }
+
+    public function rollStrike()
+    {
+        $this->roll(10);
     }
 }
