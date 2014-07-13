@@ -62,6 +62,28 @@ class GameSpec extends ObjectBehavior
     }
 
     /**
+     * can roll a perfect game
+     */
+    function it_can_roll_a_perfect_game()
+    {
+        $this->rollMany(12,10);
+        $this->score()->shouldReturn(300);
+    }
+
+    /**
+     * counts two bonus rolls for strike
+     */
+    function it_counts_two_bonus_rolls_for_strike()
+    {
+        $this->rollStrike();  // 10 + 10 + 5 = 25
+        $this->rollStrike();  // 10 + 5 + 2  = 17
+        $this->roll(5); // + 5
+        $this->roll(2); // + 2
+        $this->rollMany(14, 0);
+        $this->score()->shouldReturn(49);
+    }
+
+    /**
      * @param $n
      * @param $pins
      */
