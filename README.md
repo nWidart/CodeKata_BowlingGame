@@ -1,8 +1,6 @@
-PHPSpec2 Standard Distribution
+Implementation of the PHP Bowling Game
 ==========================
 
-Welcome to the PHPSpec2 Standard Distribution - a fully-functional PHPSpec2 project that you can use as a start point for your applications.
+Using PHPSpec.
 
-### Installing the Standard Distribution:
-
-    curl -sS https://getcomposer.org/installer | php && php composer.phar create-project cakper/phpspec-standard -s dev
+[Uncle Bobs Bowling Game](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata)
